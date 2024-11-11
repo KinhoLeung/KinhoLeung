@@ -115,6 +115,9 @@ Last Updated: Monday, November 11th, 2024, 3:40:07 PM
 # 🗒️ Latest Blogs Posts
 <!-- BLOG-POST-LIST:START -->
 - [WSL2连接USB存储设备](https://www.oathblade.com/posts/wsl2%E8%BF%9E%E6%8E%A5usb%E5%AD%98%E5%82%A8%E8%AE%BE%E5%A4%87/)
+- [Markdown Extended Features](https://www.oathblade.com/posts/markdown-extended/)
+- [Markdown Example](https://www.oathblade.com/posts/markdown/)
+- [Include Video in the Posts](https://www.oathblade.com/posts/video/)
 <!-- BLOG-POST-LIST:END -->
 
 # 📫 Contact Me
