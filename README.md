@@ -115,7 +115,7 @@ Last Updated: Sunday, November 17th, 2024, 11:38:38 AM
 
 # 🗒️ Latest Blogs Posts
 <!-- BLOG-POST-LIST:START -->
-- [WSL2连接USB存储设备](https://fuwari.vercel.app/posts/wsl2-usb/wsl2%E8%BF%9E%E6%8E%A5usb%E5%AD%98%E5%82%A8%E8%AE%BE%E5%A4%87/)
+- [WSL2连接USB存储设备](https://oathblade.com/posts/wsl2-usb/wsl2%E8%BF%9E%E6%8E%A5usb%E5%AD%98%E5%82%A8%E8%AE%BE%E5%A4%87/)
 <!-- BLOG-POST-LIST:END -->
 
 # 📫 Contact Me
