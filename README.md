@@ -88,7 +88,7 @@ https://skillicons.dev/icons?i=anaconda,astro,azure,bash,c,cpp,cloudflare,cmake,
 Last Updated: Saturday, November 30th, 2024, 3:22:22 PM
 <!--RECENT_ACTIVITY:last_update_end-->
 
-
+<!--
 # 🎵 Spotify Recently Played
 <div align="center">
   <a href="https://github.com/tthn0/Spotify-Readme">
@@ -99,7 +99,7 @@ Last Updated: Saturday, November 30th, 2024, 3:22:22 PM
     </picture>
   </a>
 </div>
-
+-->
 
 # 🎮 Steam Recently Played
 <div align="center">
