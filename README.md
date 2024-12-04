@@ -77,15 +77,15 @@ https://skillicons.dev/icons?i=anaconda,astro,azure,bash,c,cpp,cloudflare,cmake,
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed 1 commit(s) to [KinhoLeung/KinhoLeung](https://github.com/KinhoLeung/KinhoLeung)<br>
-2. 💪 Opened PR [#237](https://github.com/saicaca/fuwari/pull/237) in [saicaca/fuwari](https://github.com/saicaca/fuwari)<br>
-3. ⬆️ Pushed 1 commit(s) to [KinhoLeung/Oathblade](https://github.com/KinhoLeung/Oathblade)<br>
-4. ⭐ Starred [xmake-io/xmake](https://github.com/xmake-io/xmake)<br>
-5. 💬 Commented on [#282](https://github.com/xmake-io/xmake-vscode/issues/282#issuecomment-2505199793) in [xmake-io/xmake-vscode](https://github.com/xmake-io/xmake-vscode)<br>
+1. ❌ Closed PR [#237](https://github.com/saicaca/fuwari/pull/237) in [saicaca/fuwari](https://github.com/saicaca/fuwari)<br>
+2. ⬆️ Pushed 3 commit(s) to [KinhoLeung/Oathblade](https://github.com/KinhoLeung/Oathblade)<br>
+3. ⬆️ Pushed 1 commit(s) to [KinhoLeung/KinhoLeung](https://github.com/KinhoLeung/KinhoLeung)<br>
+4. 💪 Opened PR [#237](https://github.com/saicaca/fuwari/pull/237) in [saicaca/fuwari](https://github.com/saicaca/fuwari)<br>
+5. ⬆️ Pushed 1 commit(s) to [KinhoLeung/Oathblade](https://github.com/KinhoLeung/Oathblade)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Wednesday, December 4th, 2024, 8:32:24 AM
+Last Updated: Wednesday, December 4th, 2024, 9:26:24 AM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
