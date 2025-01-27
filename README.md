@@ -77,15 +77,15 @@ https://skillicons.dev/icons?i=anaconda,astro,azure,bash,c,cpp,cloudflare,cmake,
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [nhivp/Awesome-Embedded](https://github.com/nhivp/Awesome-Embedded)<br>
-2. ⬆️ Pushed 1 commit(s) to [KinhoLeung/lvgl_editor](https://github.com/KinhoLeung/lvgl_editor)<br>
-3. ⭐ Starred [lvgl/lvgl_editor](https://github.com/lvgl/lvgl_editor)<br>
-4. 🔱 Forked [KinhoLeung/lvgl_editor](https://github.com/KinhoLeung/lvgl_editor) from [lvgl/lvgl_editor](https://github.com/lvgl/lvgl_editor)<br>
-5. ⭐ Starred [project-generator/project_generator](https://github.com/project-generator/project_generator)<br>
+1. ⭐ Starred [imKeYan/EmbedBooks](https://github.com/imKeYan/EmbedBooks)<br>
+2. ⭐ Starred [nhivp/Awesome-Embedded](https://github.com/nhivp/Awesome-Embedded)<br>
+3. ⬆️ Pushed 1 commit(s) to [KinhoLeung/lvgl_editor](https://github.com/KinhoLeung/lvgl_editor)<br>
+4. ⭐ Starred [lvgl/lvgl_editor](https://github.com/lvgl/lvgl_editor)<br>
+5. 🔱 Forked [KinhoLeung/lvgl_editor](https://github.com/KinhoLeung/lvgl_editor) from [lvgl/lvgl_editor](https://github.com/lvgl/lvgl_editor)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Monday, January 27th, 2025, 11:38:34 AM
+Last Updated: Monday, January 27th, 2025, 12:43:33 PM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
