@@ -77,15 +77,15 @@ https://skillicons.dev/icons?i=anaconda,astro,azure,bash,c,cpp,cloudflare,cmake,
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [imKeYan/EmbedBooks](https://github.com/imKeYan/EmbedBooks)<br>
-2. ⭐ Starred [nhivp/Awesome-Embedded](https://github.com/nhivp/Awesome-Embedded)<br>
-3. ⬆️ Pushed 1 commit(s) to [KinhoLeung/lvgl_editor](https://github.com/KinhoLeung/lvgl_editor)<br>
-4. ⭐ Starred [lvgl/lvgl_editor](https://github.com/lvgl/lvgl_editor)<br>
-5. 🔱 Forked [KinhoLeung/lvgl_editor](https://github.com/KinhoLeung/lvgl_editor) from [lvgl/lvgl_editor](https://github.com/lvgl/lvgl_editor)<br>
+1. ⭐ Starred [oz123/awesome-c](https://github.com/oz123/awesome-c)<br>
+2. ⭐ Starred [imKeYan/EmbedBooks](https://github.com/imKeYan/EmbedBooks)<br>
+3. ⭐ Starred [nhivp/Awesome-Embedded](https://github.com/nhivp/Awesome-Embedded)<br>
+4. ⬆️ Pushed 1 commit(s) to [KinhoLeung/lvgl_editor](https://github.com/KinhoLeung/lvgl_editor)<br>
+5. ⭐ Starred [lvgl/lvgl_editor](https://github.com/lvgl/lvgl_editor)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Saturday, February 1st, 2025, 12:38:26 PM
+Last Updated: Saturday, February 1st, 2025, 1:20:53 PM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
