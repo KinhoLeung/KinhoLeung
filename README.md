@@ -81,11 +81,10 @@ https://skillicons.dev/icons?i=anaconda,astro,azure,bash,c,cpp,cloudflare,cmake,
 2. ⬆️ Pushed 1 commit(s) to [KinhoLeung/signalsmith-stretch](https://github.com/KinhoLeung/signalsmith-stretch)<br>
 3. 🔱 Forked [KinhoLeung/openai-realtime-embedded-sdk](https://github.com/KinhoLeung/openai-realtime-embedded-sdk) from [openai/openai-realtime-embedded-sdk](https://github.com/openai/openai-realtime-embedded-sdk)<br>
 4. ⭐ Starred [openai/openai-realtime-embedded-sdk](https://github.com/openai/openai-realtime-embedded-sdk)<br>
-5. ⭐ Starred [oz123/awesome-c](https://github.com/oz123/awesome-c)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Monday, March 3rd, 2025, 12:47:10 PM
+Last Updated: Monday, March 3rd, 2025, 1:29:56 PM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
