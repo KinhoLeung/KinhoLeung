@@ -77,14 +77,15 @@ https://skillicons.dev/icons?i=anaconda,astro,azure,bash,c,cpp,cloudflare,cmake,
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [audacity/audacity](https://github.com/audacity/audacity)<br>
-2. ⭐ Starred [libusb/hidapi](https://github.com/libusb/hidapi)<br>
-3. ⭐ Starred [Liniyous/ElaWidgetTools](https://github.com/Liniyous/ElaWidgetTools)<br>
-4. ⭐ Starred [zhuzichu520/FluentUI](https://github.com/zhuzichu520/FluentUI)<br>
+1. ⭐ Starred [BaudDance/SerialAssistant](https://github.com/BaudDance/SerialAssistant)<br>
+2. ⭐ Starred [audacity/audacity](https://github.com/audacity/audacity)<br>
+3. ⭐ Starred [libusb/hidapi](https://github.com/libusb/hidapi)<br>
+4. ⭐ Starred [Liniyous/ElaWidgetTools](https://github.com/Liniyous/ElaWidgetTools)<br>
+5. ⭐ Starred [zhuzichu520/FluentUI](https://github.com/zhuzichu520/FluentUI)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Monday, April 28th, 2025, 7:51:26 AM
+Last Updated: Monday, April 28th, 2025, 9:25:39 AM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
