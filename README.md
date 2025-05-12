@@ -77,15 +77,15 @@ https://skillicons.dev/icons?i=anaconda,astro,azure,bash,c,cpp,cloudflare,cmake,
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. ❗️ Opened issue [#32](https://github.com/har-in-air/STM32F411_USB_AUDIO_DAC/issues/32) in [har-in-air/STM32F411_USB_AUDIO_DAC](https://github.com/har-in-air/STM32F411_USB_AUDIO_DAC)<br>
-2. ⭐ Starred [BaudDance/SerialAssistant](https://github.com/BaudDance/SerialAssistant)<br>
-3. ⭐ Starred [audacity/audacity](https://github.com/audacity/audacity)<br>
-4. ⭐ Starred [libusb/hidapi](https://github.com/libusb/hidapi)<br>
-5. ⭐ Starred [Liniyous/ElaWidgetTools](https://github.com/Liniyous/ElaWidgetTools)<br>
+1. ⭐ Starred [LCZSQY/STM32_Manual](https://github.com/LCZSQY/STM32_Manual)<br>
+2. ❗️ Opened issue [#32](https://github.com/har-in-air/STM32F411_USB_AUDIO_DAC/issues/32) in [har-in-air/STM32F411_USB_AUDIO_DAC](https://github.com/har-in-air/STM32F411_USB_AUDIO_DAC)<br>
+3. ⭐ Starred [BaudDance/SerialAssistant](https://github.com/BaudDance/SerialAssistant)<br>
+4. ⭐ Starred [audacity/audacity](https://github.com/audacity/audacity)<br>
+5. ⭐ Starred [libusb/hidapi](https://github.com/libusb/hidapi)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Monday, May 12th, 2025, 3:31:37 AM
+Last Updated: Monday, May 12th, 2025, 4:30:40 AM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
