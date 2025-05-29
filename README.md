@@ -81,11 +81,10 @@ https://skillicons.dev/icons?i=anaconda,astro,azure,bash,c,cpp,cloudflare,cmake,
 2. ⭐ Starred [intellism/vscode-comment-translate](https://github.com/intellism/vscode-comment-translate)<br>
 3. ⭐ Starred [LCZSQY/STM32_Manual](https://github.com/LCZSQY/STM32_Manual)<br>
 4. ❗️ Opened issue [#32](https://github.com/har-in-air/STM32F411_USB_AUDIO_DAC/issues/32) in [har-in-air/STM32F411_USB_AUDIO_DAC](https://github.com/har-in-air/STM32F411_USB_AUDIO_DAC)<br>
-5. ⭐ Starred [BaudDance/SerialAssistant](https://github.com/BaudDance/SerialAssistant)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Thursday, May 29th, 2025, 2:03:54 AM
+Last Updated: Thursday, May 29th, 2025, 3:32:44 AM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
