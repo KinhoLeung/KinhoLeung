@@ -79,11 +79,10 @@ https://skillicons.dev/icons?i=anaconda,astro,azure,bash,c,cpp,cloudflare,cmake,
 <!--RECENT_ACTIVITY:start-->
 1. ⭐ Starred [nickdiego/compiledb](https://github.com/nickdiego/compiledb)<br>
 2. ⭐ Starred [intellism/vscode-comment-translate](https://github.com/intellism/vscode-comment-translate)<br>
-3. ⭐ Starred [LCZSQY/STM32_Manual](https://github.com/LCZSQY/STM32_Manual)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Wednesday, June 11th, 2025, 3:35:52 AM
+Last Updated: Wednesday, June 11th, 2025, 4:34:23 AM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
