@@ -78,11 +78,10 @@ https://skillicons.dev/icons?i=anaconda,astro,azure,bash,c,cpp,cloudflare,cmake,
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
 1. ⭐ Starred [nickdiego/compiledb](https://github.com/nickdiego/compiledb)<br>
-2. ⭐ Starred [intellism/vscode-comment-translate](https://github.com/intellism/vscode-comment-translate)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Saturday, June 14th, 2025, 7:39:52 AM
+Last Updated: Saturday, June 14th, 2025, 8:30:06 AM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
