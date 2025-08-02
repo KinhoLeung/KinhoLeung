@@ -77,11 +77,12 @@ https://skillicons.dev/icons?i=anaconda,astro,azure,bash,c,cpp,cloudflare,cmake,
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [sonercirit/zed-windows-stable](https://github.com/sonercirit/zed-windows-stable)<br>
+1. ⭐ Starred [deevus/zed-windows-builds](https://github.com/deevus/zed-windows-builds)<br>
+2. ⭐ Starred [sonercirit/zed-windows-stable](https://github.com/sonercirit/zed-windows-stable)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Saturday, August 2nd, 2025, 9:44:20 PM
+Last Updated: Saturday, August 2nd, 2025, 10:26:10 PM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
