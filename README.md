@@ -26,7 +26,7 @@
 
 
 <!--
-https://skillicons.dev/icons?i=anaconda,astro,azure,bash,c,cpp,cloudflare,cmake,css,docker,fastapi,firebase,gcp,git,github,githubactions,gitlab,gmail,html,js,linux,lua,md,matlab,nodejs,notion,npm,pnpm,powershell,py,pytorch,qt,sqlite,svg,tensorflow,ubuntu,vercel,vim,visualstudio,vscode,windows
+https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,linux,lua,md,neovim,powershell,qt,sqlite,ubuntu,vscode,windows&perline=18&theme=dark
 -->
 # 🛠 Tech Stack
 <div align="center">
