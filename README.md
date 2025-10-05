@@ -77,15 +77,15 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed 22 commit(s) to [KinhoLeung/lvgl_editor](https://github.com/KinhoLeung/lvgl_editor)<br>
-2. ⭐ Starred [buxtronix/arduino](https://github.com/buxtronix/arduino)<br>
-3. 📔 Created new repository [KinhoLeung/ToggleButton](https://github.com/KinhoLeung/ToggleButton)<br>
-4. ⬆️ Pushed 1 commit(s) to [KinhoLeung/Algorithm](https://github.com/KinhoLeung/Algorithm)<br>
-5. 📔 Created new repository [KinhoLeung/Algorithm](https://github.com/KinhoLeung/Algorithm)<br>
+1. ⭐ Starred [SEGGERMicro/RTT](https://github.com/SEGGERMicro/RTT)<br>
+2. ⬆️ Pushed 22 commit(s) to [KinhoLeung/lvgl_editor](https://github.com/KinhoLeung/lvgl_editor)<br>
+3. ⭐ Starred [buxtronix/arduino](https://github.com/buxtronix/arduino)<br>
+4. 📔 Created new repository [KinhoLeung/ToggleButton](https://github.com/KinhoLeung/ToggleButton)<br>
+5. ⬆️ Pushed 1 commit(s) to [KinhoLeung/Algorithm](https://github.com/KinhoLeung/Algorithm)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Sunday, October 5th, 2025, 1:38:57 PM
+Last Updated: Sunday, October 5th, 2025, 2:19:30 PM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
