@@ -77,15 +77,15 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [FreeRTOS/FreeRTOS](https://github.com/FreeRTOS/FreeRTOS)<br>
-2. ⬆️ Pushed 1 commit(s) to [KinhoLeung/lvgl_editor](https://github.com/KinhoLeung/lvgl_editor)<br>
-3. ⬆️ Pushed 1 commit(s) to [KinhoLeung/Rotary](https://github.com/KinhoLeung/Rotary)<br>
-4. ⭐ Starred [SEGGERMicro/RTT](https://github.com/SEGGERMicro/RTT)<br>
-5. ⬆️ Pushed 22 commit(s) to [KinhoLeung/lvgl_editor](https://github.com/KinhoLeung/lvgl_editor)<br>
+1. ⭐ Starred [Crazy-Geeks/STM32-ARGB-DMA](https://github.com/Crazy-Geeks/STM32-ARGB-DMA)<br>
+2. ⭐ Starred [FreeRTOS/FreeRTOS](https://github.com/FreeRTOS/FreeRTOS)<br>
+3. ⬆️ Pushed 1 commit(s) to [KinhoLeung/lvgl_editor](https://github.com/KinhoLeung/lvgl_editor)<br>
+4. ⬆️ Pushed 1 commit(s) to [KinhoLeung/Rotary](https://github.com/KinhoLeung/Rotary)<br>
+5. ⭐ Starred [SEGGERMicro/RTT](https://github.com/SEGGERMicro/RTT)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Sunday, October 12th, 2025, 2:19:52 PM
+Last Updated: Sunday, October 12th, 2025, 2:39:13 PM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
