@@ -77,15 +77,15 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. 📔 Created new repository [KinhoLeung/ARGB](https://github.com/KinhoLeung/ARGB)<br>
-2. ⭐ Starred [kitesurfer1404/WS2812FX](https://github.com/kitesurfer1404/WS2812FX)<br>
-3. ⭐ Starred [Crazy-Geeks/STM32-ARGB-DMA](https://github.com/Crazy-Geeks/STM32-ARGB-DMA)<br>
-4. ⭐ Starred [FreeRTOS/FreeRTOS](https://github.com/FreeRTOS/FreeRTOS)<br>
-5. ⬆️ Pushed 1 commit(s) to [KinhoLeung/lvgl_editor](https://github.com/KinhoLeung/lvgl_editor)<br>
+1. ⭐ Starred [kitesurfer1404/WS2812FX](https://github.com/kitesurfer1404/WS2812FX)<br>
+2. ⭐ Starred [Crazy-Geeks/STM32-ARGB-DMA](https://github.com/Crazy-Geeks/STM32-ARGB-DMA)<br>
+3. ⭐ Starred [FreeRTOS/FreeRTOS](https://github.com/FreeRTOS/FreeRTOS)<br>
+4. ⬆️ Pushed undefined commit(s) to [KinhoLeung/lvgl_editor](https://github.com/KinhoLeung/lvgl_editor)<br>
+5. ⬆️ Pushed undefined commit(s) to [KinhoLeung/Rotary](https://github.com/KinhoLeung/Rotary)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Thursday, October 16th, 2025, 5:41:55 PM
+Last Updated: Thursday, October 16th, 2025, 6:35:36 PM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
