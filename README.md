@@ -77,15 +77,15 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. 💪 Opened PR [#17926](undefined) in [espressif/esp-idf](https://github.com/espressif/esp-idf)<br>
-2. ⬆️ Pushed undefined commit(s) to [KinhoLeung/esp-idf](https://github.com/KinhoLeung/esp-idf)<br>
-3. 🔱 Forked [KinhoLeung/esp-idf](https://github.com/KinhoLeung/esp-idf) from [KinhoLeung/esp-idf](https://github.com/KinhoLeung/esp-idf)<br>
-4. ⬆️ Pushed undefined commit(s) to [KinhoLeung/LVGL_PageManager](https://github.com/KinhoLeung/LVGL_PageManager)<br>
-5. ⬆️ Pushed undefined commit(s) to [KinhoLeung/xAnime](https://github.com/KinhoLeung/xAnime)<br>
+1. ⬆️ Pushed undefined commit(s) to [KinhoLeung/vscode](https://github.com/KinhoLeung/vscode)<br>
+2. ⬆️ Pushed undefined commit(s) to [KinhoLeung/lvgl_editor](https://github.com/KinhoLeung/lvgl_editor)<br>
+3. 💪 Opened PR [#17926](undefined) in [espressif/esp-idf](https://github.com/espressif/esp-idf)<br>
+4. ⬆️ Pushed undefined commit(s) to [KinhoLeung/esp-idf](https://github.com/KinhoLeung/esp-idf)<br>
+5. 🔱 Forked [KinhoLeung/esp-idf](https://github.com/KinhoLeung/esp-idf) from [KinhoLeung/esp-idf](https://github.com/KinhoLeung/esp-idf)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Tuesday, November 25th, 2025, 12:55:49 PM
+Last Updated: Tuesday, November 25th, 2025, 1:38:51 PM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
