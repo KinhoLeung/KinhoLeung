@@ -77,15 +77,15 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [KinhoLeung/vscode](https://github.com/KinhoLeung/vscode)<br>
-2. ⬆️ Pushed undefined commit(s) to [KinhoLeung/vscode](https://github.com/KinhoLeung/vscode)<br>
-3. ⬆️ Pushed undefined commit(s) to [KinhoLeung/lvgl_editor](https://github.com/KinhoLeung/lvgl_editor)<br>
-4. 💪 Opened PR [#17926](undefined) in [espressif/esp-idf](https://github.com/espressif/esp-idf)<br>
-5. ⬆️ Pushed undefined commit(s) to [KinhoLeung/esp-idf](https://github.com/KinhoLeung/esp-idf)<br>
+1. ⭐ Starred [hpmicro/hpm_sdk](https://github.com/hpmicro/hpm_sdk)<br>
+2. ⭐ Starred [hathach/tinyusb](https://github.com/hathach/tinyusb)<br>
+3. ⬆️ Pushed undefined commit(s) to [KinhoLeung/vscode](https://github.com/KinhoLeung/vscode)<br>
+4. ⬆️ Pushed undefined commit(s) to [KinhoLeung/vscode](https://github.com/KinhoLeung/vscode)<br>
+5. ⬆️ Pushed undefined commit(s) to [KinhoLeung/lvgl_editor](https://github.com/KinhoLeung/lvgl_editor)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Sunday, November 30th, 2025, 11:41:40 PM
+Last Updated: Monday, December 1st, 2025, 2:29:47 AM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
