@@ -77,15 +77,15 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [NaisuXu/HID_Passthrough_Tool](https://github.com/NaisuXu/HID_Passthrough_Tool)<br>
-2. ⭐ Starred [hpmicro/hpm_sdk](https://github.com/hpmicro/hpm_sdk)<br>
-3. ⭐ Starred [hathach/tinyusb](https://github.com/hathach/tinyusb)<br>
-4. ⬆️ Pushed undefined commit(s) to [KinhoLeung/vscode](https://github.com/KinhoLeung/vscode)<br>
-5. ⬆️ Pushed undefined commit(s) to [KinhoLeung/vscode](https://github.com/KinhoLeung/vscode)<br>
+1. ⭐ Starred [notthetup/awesome-webaudio](https://github.com/notthetup/awesome-webaudio)<br>
+2. ⭐ Starred [NumberOneBot/dsssp](https://github.com/NumberOneBot/dsssp)<br>
+3. ⭐ Starred [NaisuXu/HID_Passthrough_Tool](https://github.com/NaisuXu/HID_Passthrough_Tool)<br>
+4. ⭐ Starred [hpmicro/hpm_sdk](https://github.com/hpmicro/hpm_sdk)<br>
+5. ⭐ Starred [hathach/tinyusb](https://github.com/hathach/tinyusb)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Tuesday, December 2nd, 2025, 9:33:03 AM
+Last Updated: Tuesday, December 2nd, 2025, 10:30:55 AM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
