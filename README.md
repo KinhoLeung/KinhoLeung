@@ -77,15 +77,15 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp](https://github.com/KinhoLeung/dsssp)<br>
-2. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
+1. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
+2. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp](https://github.com/KinhoLeung/dsssp)<br>
 3. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
-4. ⭐ Starred [nanopb/nanopb](https://github.com/nanopb/nanopb)<br>
-5. ⭐ Starred [NumberOneBot/dsssp-demo](https://github.com/NumberOneBot/dsssp-demo)<br>
+4. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
+5. ⭐ Starred [nanopb/nanopb](https://github.com/nanopb/nanopb)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Thursday, December 18th, 2025, 9:33:51 AM
+Last Updated: Thursday, December 18th, 2025, 10:31:25 AM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
