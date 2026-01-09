@@ -81,11 +81,11 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 2. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
 3. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
 4. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
-5. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp](https://github.com/KinhoLeung/dsssp)<br>
+5. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Friday, January 9th, 2026, 7:31:56 AM
+Last Updated: Friday, January 9th, 2026, 8:39:28 AM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
