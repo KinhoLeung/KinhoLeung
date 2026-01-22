@@ -20,7 +20,7 @@
 # 🏆 Github Profile Trophies
 <div align="center">
   <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=KinhoLeung&theme=onedark&no-bg=true&column=-1&no-frame=true" />
+    <img src="https://github-profile-trophy-fork-two.vercel.app/?username=KinhoLeung&theme=onedark&no-bg=true&column=-1&no-frame=true" />
   </a>
 </div>
 
