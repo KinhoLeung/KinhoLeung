@@ -2,7 +2,7 @@ name: Update README cards
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Runs once daily at midnight
+    - cron: "0 0 * * *" # 每天 UTC 00:00
   workflow_dispatch:
 
 jobs:
@@ -15,28 +15,76 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Generate stats card
+      # GitHub Stats（暗色）
+      - name: Generate stats card (dark)
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true
-          path: profile/stats.svg
+          options: >
+            username=KinhoLeung
+            &hide_border=true
+            &show_icons=true
+            &card_width=400
+            &theme=vue-dark
+            &rank_icon=github
+            &ring_color=1ED760
+            &title_color=1ED760
+            &icon_color=1ED760
+            &bg_color=00000000
+          path: profile/stats-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate top languages card
+      # GitHub Stats（亮色）
+      - name: Generate stats card (light)
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: >
+            username=KinhoLeung
+            &hide_border=true
+            &show_icons=true
+            &card_width=400
+            &theme=vue
+            &rank_icon=github
+            &ring_color=1ED760
+            &title_color=1ED760
+            &icon_color=1ED760
+            &bg_color=00000000
+          path: profile/stats-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Top Languages（暗色）
+      - name: Generate top languages card (dark)
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6
-          path: profile/top-langs.svg
+          options: >
+            username=KinhoLeung
+            &layout=compact
+            &langs_count=6
+            &theme=vue-dark
+            &hide_border=true
+            &title_color=1ED760
+            &icon_color=1ED760
+            &bg_color=00000000
+          path: profile/top-langs-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate pin card
+      # Top Languages（亮色）
+      - name: Generate top languages card (light)
         uses: readme-tools/github-readme-stats-action@v1
         with:
-          card: pin
-          options: username=readme-tools&repo=github-readme-stats
-          path: profile/pin-readme-tools-github-readme-stats.svg
+          card: top-langs
+          options: >
+            username=KinhoLeung
+            &layout=compact
+            &langs_count=6
+            &theme=vue
+            &hide_border=true
+            &title_color=1ED760
+            &icon_color=1ED760
+            &bg_color=00000000
+          path: profile/top-langs-light.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit cards
