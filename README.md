@@ -53,12 +53,12 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 
 <div align="center">
   <a href="https://github.com/anuraghazra/github-readme-stats">
-    <picture>
-      <source srcset="https://github-readme-stats.vercel.app/api?username=KinhoLeung&hide_border=true&show_icons=true&card_width=400&theme=vue-dark&rank_icon=github&ring_color=1ED760&title_color=1ED760&icon_color=1ED760&bg_color=00000000" media="(prefers-color-scheme: dark)" />
-      <source srcset="https://github-readme-stats.vercel.app/api?username=KinhoLeung&hide_border=true&show_icons=true&card_width=400&theme=vue&rank_icon=github&ring_color=1ED760&title_color=1ED760&icon_color=1ED760&bg_color=00000000" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
-      <img alt="github readme stats" src="https://github-readme-stats.vercel.app/api?username=KinhoLeung&hide_border=true&show_icons=true&card_width=400&theme=vue&rank_icon=github&ring_color=1ED760&title_color=1ED760&icon_color=1ED760&bg_color=00000000" />
-    </picture>
-  </a>
+  <picture>
+    <source srcset="https://github.com/KinhoLeung/KinhoLeung/raw/main/profile/stats-dark.svg" media="(prefers-color-scheme: dark)" />
+    <source srcset="https://github.com/KinhoLeung/KinhoLeung/raw/main/profile/stats-light.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+    <img alt="github readme stats" src="https://github.com/KinhoLeung/KinhoLeung/raw/main/profile/stats-light.svg" />
+  </picture>
+</a>
   
   <a href="https://github.com/DenverCoder1/github-readme-streak-stats">
     <picture>
