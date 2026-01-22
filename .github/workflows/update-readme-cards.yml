@@ -2,7 +2,7 @@ name: Update README cards
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Runs once daily at midnight (UTC)
+    - cron: "0 0 * * *" # daily at 00:00 UTC
   workflow_dispatch:
 
 jobs:
@@ -15,7 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      # --- GitHub Readme Stats (generated into repo) ---
       - name: Generate stats card (dark)
         uses: readme-tools/github-readme-stats-action@v1
         with:
@@ -47,20 +46,6 @@ jobs:
           options: "username=KinhoLeung&layout=compact&langs_count=6&theme=vue&hide_border=true&title_color=1ED760&icon_color=1ED760&bg_color=00000000"
           path: profile/top-langs-light.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      # --- Streak Stats (download SVG, then commit into repo) ---
-      # Using herokuapp endpoint as a more reliable alternative to streak-stats.demolab.com
-      - name: Generate streak card (dark)
-        run: |
-          mkdir -p profile
-          curl -fsSL "https://github-readme-streak-stats.herokuapp.com/?user=KinhoLeung&hide_border=true&border=E4E2E3&card_width=400&theme=github-dark&background=00000000&fire=1ED760" \
-            -o profile/streak-dark.svg
-
-      - name: Generate streak card (light)
-        run: |
-          mkdir -p profile
-          curl -fsSL "https://github-readme-streak-stats.herokuapp.com/?user=KinhoLeung&hide_border=true&border=E4E2E3&card_width=400&theme=github-light&background=00000000&dates=1ED760" \
-            -o profile/streak-light.svg
 
       - name: Commit cards
         run: |
