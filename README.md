@@ -62,9 +62,9 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
   
   <a href="https://github.com/DenverCoder1/github-readme-streak-stats">
     <picture>
-      <source srcset="https://streak-stats.demolab.com/?user=KinhoLeung&hide_border=true&border=E4E2E3&card_width=400&theme=github-dark&background=00000000&fire=1ED760" media="(prefers-color-scheme: dark)" />
-      <source srcset="https://streak-stats.demolab.com/?user=KinhoLeung&hide_border=true&border=E4E2E3&card_width=400&theme=github-light&background=00000000&dates=1ED760" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
-      <img alt="streak stats" src="https://streak-stats.demolab.com/?user=KinhoLeung&hide_border=true&border=E4E2E3&card_width=400&theme=github-light&background=00000000&dates=1ED760" />
+      <source srcset="https://github-readme-streak-stats-vijaypur.vercel.app?user=KinhoLeung&hide_border=true&border=E4E2E3&card_width=400&theme=github-dark&background=00000000&fire=1ED760" media="(prefers-color-scheme: dark)" />
+      <source srcset="https://github-readme-streak-stats-vijaypur.vercel.app?user=KinhoLeung&hide_border=true&border=E4E2E3&card_width=400&theme=github-light&background=00000000&dates=1ED760" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+      <img alt="streak stats" src="https://github-readme-streak-stats-vijaypur.vercel.app?user=KinhoLeung&hide_border=true&border=E4E2E3&card_width=400&theme=github-light&background=00000000&dates=1ED760" />
     </picture>
   </a>
 </div>
