@@ -78,14 +78,14 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
 1. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
-2. ❌ Closed PR [#1](undefined) in [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
+2. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
 3. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
-4. ⬆️ Pushed undefined commit(s) to [KinhoLeung/KinhoLeung](https://github.com/KinhoLeung/KinhoLeung)<br>
+4. ❌ Closed PR [#1](undefined) in [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
 5. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Tuesday, January 27th, 2026, 3:58:54 AM
+Last Updated: Tuesday, January 27th, 2026, 4:53:36 AM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
