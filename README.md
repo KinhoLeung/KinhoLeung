@@ -77,12 +77,14 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [MrHulu/QmlQCustomPlot](https://github.com/MrHulu/QmlQCustomPlot)<br>
-2. ⬆️ Pushed undefined commit(s) to [KinhoLeung/KinhoLeung](https://github.com/KinhoLeung/KinhoLeung)<br>
+1. ⬆️ Pushed undefined commit(s) to [KinhoLeung/STM32F103RCT6](https://github.com/KinhoLeung/STM32F103RCT6)<br>
+2. ⬆️ Pushed undefined commit(s) to [KinhoLeung/LVGL_PageManager](https://github.com/KinhoLeung/LVGL_PageManager)<br>
+3. ⭐ Starred [MrHulu/QmlQCustomPlot](https://github.com/MrHulu/QmlQCustomPlot)<br>
+4. ⬆️ Pushed undefined commit(s) to [KinhoLeung/KinhoLeung](https://github.com/KinhoLeung/KinhoLeung)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Tuesday, March 17th, 2026, 6:08:00 AM
+Last Updated: Tuesday, March 17th, 2026, 7:36:24 AM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
