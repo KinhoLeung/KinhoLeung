@@ -77,15 +77,15 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [biliup/biliup](https://github.com/biliup/biliup)<br>
-2. ⬆️ Pushed undefined commit(s) to [KinhoLeung/STM32F103RCT6](https://github.com/KinhoLeung/STM32F103RCT6)<br>
-3. ⬆️ Pushed undefined commit(s) to [KinhoLeung/LVGL_PageManager](https://github.com/KinhoLeung/LVGL_PageManager)<br>
-4. ⭐ Starred [MrHulu/QmlQCustomPlot](https://github.com/MrHulu/QmlQCustomPlot)<br>
-5. ⬆️ Pushed undefined commit(s) to [KinhoLeung/KinhoLeung](https://github.com/KinhoLeung/KinhoLeung)<br>
+1. ⭐ Starred [yt-dlp/yt-dlp](https://github.com/yt-dlp/yt-dlp)<br>
+2. ⭐ Starred [biliup/biliup](https://github.com/biliup/biliup)<br>
+3. ⬆️ Pushed undefined commit(s) to [KinhoLeung/STM32F103RCT6](https://github.com/KinhoLeung/STM32F103RCT6)<br>
+4. ⬆️ Pushed undefined commit(s) to [KinhoLeung/LVGL_PageManager](https://github.com/KinhoLeung/LVGL_PageManager)<br>
+5. ⭐ Starred [MrHulu/QmlQCustomPlot](https://github.com/MrHulu/QmlQCustomPlot)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Thursday, March 19th, 2026, 4:33:59 PM
+Last Updated: Thursday, March 19th, 2026, 5:55:06 PM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
