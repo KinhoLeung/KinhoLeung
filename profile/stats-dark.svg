@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">kinho's GitHub Stats, Rank: C</title>
-        <desc id="descId">Total Stars Earned: 4, Total Commits  (last year) : 70, Total PRs: 5, Total Issues: 3, Contributed to (last year): 2</desc>
+        <desc id="descId">Total Stars Earned: 4, Total Commits  (last year) : 70, Total PRs: 5, Total Issues: 4, Contributed to (last year): 3</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 229.9491522594574;
+        stroke-dashoffset: 229.42214842264968;
       }
     }
   
@@ -207,7 +207,7 @@
         x="219.01"
         y="12.5"
         data-testid="issues"
-      >3</text>
+      >4</text>
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">
@@ -222,7 +222,7 @@
         x="219.01"
         y="12.5"
         data-testid="contribs"
-      >2</text>
+      >3</text>
     </g>
   </g>
     </svg>
