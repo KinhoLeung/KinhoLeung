@@ -77,15 +77,15 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [devmaxxing/videocr-PaddleOCR](https://github.com/devmaxxing/videocr-PaddleOCR)<br>
-2. ⭐ Starred [YaoFANGUK/video-subtitle-extractor](https://github.com/YaoFANGUK/video-subtitle-extractor)<br>
-3. ⭐ Starred [debevv/nanoMODBUS](https://github.com/debevv/nanoMODBUS)<br>
-4. ⬆️ Pushed undefined commit(s) to [KinhoLeung/2601-TFT1_MP3_branch_1](https://github.com/KinhoLeung/2601-TFT1_MP3_branch_1)<br>
-5. ⬆️ Pushed undefined commit(s) to [KinhoLeung/LVGL_PageManager](https://github.com/KinhoLeung/LVGL_PageManager)<br>
+1. ⭐ Starred [nomadkaraoke/python-audio-separator](https://github.com/nomadkaraoke/python-audio-separator)<br>
+2. ⭐ Starred [upseem/uvr5-cli-no-ui](https://github.com/upseem/uvr5-cli-no-ui)<br>
+3. ⭐ Starred [Eddycrack864/UVR5-NO-UI](https://github.com/Eddycrack864/UVR5-NO-UI)<br>
+4. ⭐ Starred [Anjok07/ultimatevocalremovergui](https://github.com/Anjok07/ultimatevocalremovergui)<br>
+5. ⭐ Starred [devmaxxing/videocr-PaddleOCR](https://github.com/devmaxxing/videocr-PaddleOCR)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Saturday, May 16th, 2026, 1:17:00 AM
+Last Updated: Saturday, May 16th, 2026, 4:57:16 AM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
