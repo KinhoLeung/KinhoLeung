@@ -77,10 +77,15 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
+1. ⭐ Starred [fishaudio/fish-speech](https://github.com/fishaudio/fish-speech)<br>
+2. ⭐ Starred [nomadkaraoke/python-audio-separator](https://github.com/nomadkaraoke/python-audio-separator)<br>
+3. ⭐ Starred [upseem/uvr5-cli-no-ui](https://github.com/upseem/uvr5-cli-no-ui)<br>
+4. ⭐ Starred [Eddycrack864/UVR5-NO-UI](https://github.com/Eddycrack864/UVR5-NO-UI)<br>
+5. ⭐ Starred [Anjok07/ultimatevocalremovergui](https://github.com/Anjok07/ultimatevocalremovergui)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Monday, May 18th, 2026, 12:39:40 PM
+Last Updated: Monday, May 18th, 2026, 4:29:43 PM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
