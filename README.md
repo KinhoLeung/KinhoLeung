@@ -77,15 +77,15 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [Seekladoom/Seekladoom-ASS-Effect](https://github.com/Seekladoom/Seekladoom-ASS-Effect)<br>
-2. ⭐ Starred [Aegisub/Aegisub](https://github.com/Aegisub/Aegisub)<br>
-3. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
-4. ⭐ Starred [fishaudio/fish-speech](https://github.com/fishaudio/fish-speech)<br>
-5. ⭐ Starred [nomadkaraoke/python-audio-separator](https://github.com/nomadkaraoke/python-audio-separator)<br>
+1. ⭐ Starred [anitabi/anitabi.cn-document](https://github.com/anitabi/anitabi.cn-document)<br>
+2. ⭐ Starred [Seekladoom/Seekladoom-ASS-Effect](https://github.com/Seekladoom/Seekladoom-ASS-Effect)<br>
+3. ⭐ Starred [Aegisub/Aegisub](https://github.com/Aegisub/Aegisub)<br>
+4. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
+5. ⭐ Starred [fishaudio/fish-speech](https://github.com/fishaudio/fish-speech)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Monday, May 25th, 2026, 9:36:28 AM
+Last Updated: Monday, May 25th, 2026, 1:34:27 PM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
