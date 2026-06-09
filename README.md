@@ -77,15 +77,15 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [anitabi/anitabi.cn-document](https://github.com/anitabi/anitabi.cn-document)<br>
-2. ⭐ Starred [Seekladoom/Seekladoom-ASS-Effect](https://github.com/Seekladoom/Seekladoom-ASS-Effect)<br>
-3. ⭐ Starred [Aegisub/Aegisub](https://github.com/Aegisub/Aegisub)<br>
-4. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
-5. ⭐ Starred [fishaudio/fish-speech](https://github.com/fishaudio/fish-speech)<br>
+1. ⬆️ Pushed undefined commit(s) to [KinhoLeung/vscode](https://github.com/KinhoLeung/vscode)<br>
+2. ⬆️ Pushed undefined commit(s) to [KinhoLeung/vscode](https://github.com/KinhoLeung/vscode)<br>
+3. ⭐ Starred [anitabi/anitabi.cn-document](https://github.com/anitabi/anitabi.cn-document)<br>
+4. ⭐ Starred [Seekladoom/Seekladoom-ASS-Effect](https://github.com/Seekladoom/Seekladoom-ASS-Effect)<br>
+5. ⭐ Starred [Aegisub/Aegisub](https://github.com/Aegisub/Aegisub)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Tuesday, June 9th, 2026, 4:47:03 AM
+Last Updated: Tuesday, June 9th, 2026, 8:35:21 AM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
