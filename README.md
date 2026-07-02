@@ -77,15 +77,15 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
-2. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
-3. ⭐ Starred [timminator/VideOCR](https://github.com/timminator/VideOCR)<br>
-4. ⬆️ Pushed undefined commit(s) to [KinhoLeung/EqCustomPlot](https://github.com/KinhoLeung/EqCustomPlot)<br>
-5. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
+1. ⬆️ Pushed undefined commit(s) to [KinhoLeung/EqCustomPlot](https://github.com/KinhoLeung/EqCustomPlot)<br>
+2. ⬆️ Pushed undefined commit(s) to [KinhoLeung/EqCustomPlot](https://github.com/KinhoLeung/EqCustomPlot)<br>
+3. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
+4. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
+5. ⭐ Starred [timminator/VideOCR](https://github.com/timminator/VideOCR)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Thursday, July 2nd, 2026, 12:15:43 AM
+Last Updated: Thursday, July 2nd, 2026, 4:42:25 AM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
