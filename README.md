@@ -77,15 +77,15 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [AvenCores/open-antigravity-patcher](https://github.com/AvenCores/open-antigravity-patcher)<br>
-2. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp](https://github.com/KinhoLeung/dsssp)<br>
-3. ⭐ Starred [XHY-ChuJian/FluentUIStyle](https://github.com/XHY-ChuJian/FluentUIStyle)<br>
-4. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
-5. ⬆️ Pushed undefined commit(s) to [KinhoLeung/EqCustomPlot](https://github.com/KinhoLeung/EqCustomPlot)<br>
+1. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
+2. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp-demo](https://github.com/KinhoLeung/dsssp-demo)<br>
+3. ⭐ Starred [AvenCores/open-antigravity-patcher](https://github.com/AvenCores/open-antigravity-patcher)<br>
+4. ⬆️ Pushed undefined commit(s) to [KinhoLeung/dsssp](https://github.com/KinhoLeung/dsssp)<br>
+5. ⭐ Starred [XHY-ChuJian/FluentUIStyle](https://github.com/XHY-ChuJian/FluentUIStyle)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Thursday, July 30th, 2026, 6:33:23 AM
+Last Updated: Thursday, July 30th, 2026, 9:34:10 AM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
