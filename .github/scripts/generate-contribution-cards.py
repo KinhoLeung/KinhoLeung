@@ -16,7 +16,7 @@ from math import ceil, floor, log10
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
-from xml.sax.saxutils import escape
+from xml.sax.saxutils import escape, quoteattr
 
 
 QUERY = """
@@ -56,7 +56,7 @@ STREAK_COLORS = {
         "border": "#0000",
         "stroke": "#39D353",
         "ring": "#39D353",
-        "fire": "#1ED760",
+        "fire": "#39D353",
         "current_number": "#39D353",
         "side_numbers": "#39D353",
         "current_label": "#24292F",
@@ -228,6 +228,8 @@ def format_date(value: date | None) -> str:
 def date_range(start: date | None, end: date | None, *, present: bool = False) -> str:
     if start is None:
         return "No contributions yet" if present else "No streak yet"
+    if not present and start == end:
+        return format_date(start)
     end_text = "Present" if present else format_date(end)
     return f"{format_date(start)} - {end_text}"
 
@@ -315,6 +317,10 @@ def write_streak_card(
         for x, (label, value, period, number_color, label_color) in zip(
             columns, metrics
         ):
+            is_current = label == "Current Streak"
+            label_y = 108 if is_current else 84
+            period_y = 145 if is_current else 114
+            period_baseline = 21 if is_current else 32
             label_text = tspans(label, int(width / 3 / 7.5), -9)
             period_text = tspans(period, int(width / 3 / 6), 0)
             metric_svg.append(
@@ -322,13 +328,13 @@ def write_streak_card(
                 f'<text x="0" y="32" text-anchor="middle" fill="{colors[number_color]}" '
                 f'font-family="Segoe UI, Ubuntu, sans-serif" font-weight="700" '
                 f'font-size="28px">{escape(value)}</text></g>'
-                f'<g transform="translate({x:.3f},84)">'
+                f'<g transform="translate({x:.3f},{label_y})">'
                 f'<text x="0" y="32" text-anchor="middle" fill="{colors[label_color]}" '
                 f'font-family="Segoe UI, Ubuntu, sans-serif" '
-                f'font-weight="{700 if label == "Current Streak" else 400}" '
+                f'font-weight="{700 if is_current else 400}" '
                 f'font-size="14px">{label_text}</text></g>'
-                f'<g transform="translate({x:.3f},114)">'
-                f'<text x="0" y="32" text-anchor="middle" fill="{colors["dates"]}" '
+                f'<g transform="translate({x:.3f},{period_y})">'
+                f'<text x="0" y="{period_baseline}" text-anchor="middle" fill="{colors["dates"]}" '
                 f'font-family="Segoe UI, Ubuntu, sans-serif" font-weight="400" '
                 f'font-size="12px">{period_text}</text></g>'
             )
@@ -353,7 +359,7 @@ def write_streak_card(
   <circle cx="{columns[1]:.3f}" cy="71" r="40" fill="none"
     stroke="{colors["ring"]}" stroke-width="5" mask="url(#ring_cutout)"/>
   <g transform="translate({columns[1]:.3f},19.5)" fill="{colors["fire"]}">
-    <path d="M1.5 0.7c.4 2.2.8 3.9.8 5.2 0 2.1-1.4 3.3-3.5 3.3-2 0-3.6-1.6-3.6-3.7v-.4c-2.1 2.5-3.2 5.5-3.2 8.9 0 5.1 3.5 8.5 8 8.5 4.7 0 8-3.5 8-8.4 0-5.1-2.4-10-6.5-13.4zM-.2 19.2c-1.9 0-3.3-1.4-3.3-3.2 0-1.6 1-2.7 2.8-3.1 1.8-.4 3.3-1.2 4.2-2.4.4 1.2.6 2.5.6 3.7 0 3-1.8 5-4.3 5z"/>
+    <path d="M1.5 0.67 C1.5 0.67 2.24 3.32 2.24 5.47 C2.24 7.53 0.89 9.2 -1.17 9.2 C-3.23 9.2 -4.79 7.53 -4.79 5.47 L-4.76 5.11 C-6.78 7.51 -8 10.62 -8 13.99 C-8 18.41 -4.42 22 0 22 C4.42 22 8 18.41 8 13.99 C8 8.6 5.41 3.79 1.5 0.67 Z M-0.29 19 C-2.07 19 -3.51 17.6 -3.51 15.86 C-3.51 14.24 -2.46 13.1 -0.7 12.74 C1.07 12.38 2.9 11.53 3.92 10.16 C4.31 11.45 4.51 12.81 4.51 14.2 C4.51 16.85 2.36 19 -0.29 19 Z"/>
   </g>
   {"".join(metric_svg)}
 </g>
@@ -452,15 +458,14 @@ def write_activity_graph(
         f'<circle cx="{x:.2f}" cy="{y:.2f}" r="5" class="ct-point"/>'
         for x, y in points
     )
-    title = escape(f"{display_name}'s Contribution Graph")
+    title_text = f"{display_name}'s Contribution Graph"
+    title = escape(title_text)
+    title_attribute = quoteattr(title_text)
     colors = ACTIVITY_COLORS
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}"
   viewBox="0 0 {width} {height}" fill="none" role="img"
-  aria-label="{title}">
-<defs>
-  <clipPath id="plot_clip"><rect x="{left}" y="{top}" width="{plot_width}" height="{plot_height}"/></clipPath>
-</defs>
+  aria-label={title_attribute}>
 <rect x="0" y="0" width="100%" height="100%" rx="0" fill="{colors["background"]}"
   stroke="{colors["border"]}" stroke-width="1"/>
 <style>
@@ -474,13 +479,11 @@ def write_activity_graph(
   .axis-title {{ fill: {colors["text"]}; font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; }}
 </style>
 <text x="{width / 2}" y="40" text-anchor="middle" class="header">{title}</text>
-<g clip-path="url(#plot_clip)">
-  {"".join(grid_svg)}
-  {"".join(x_grid_svg)}
-  <path d="{area_path}" class="ct-area"/>
-  <path d="{line_path}" class="ct-line"/>
-  {point_svg}
-</g>
+{"".join(grid_svg)}
+{"".join(x_grid_svg)}
+{point_svg}
+<path d="{line_path}" class="ct-line"/>
+<path d="{area_path}" class="ct-area"/>
 {"".join(y_label_svg)}
 {"".join(x_label_svg)}
 <text x="24" y="{(top + bottom) / 2}" text-anchor="middle" class="axis-title"
