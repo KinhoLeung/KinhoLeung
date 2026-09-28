@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Generate local streak and activity SVG cards from GitHub's contribution calendar."""
+"""Generate the local Streak Stats and Activity Graph SVG cards.
+
+The layouts follow the original github-readme-streak-stats and
+github-readme-activity-graph cards, while all contribution data and rendering
+are handled here for GitHub Actions.
+"""
 
 from __future__ import annotations
 
@@ -7,6 +12,7 @@ import json
 import os
 import sys
 from datetime import date, datetime, time, timedelta, timezone
+from math import ceil, floor, log10
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -16,9 +22,10 @@ from xml.sax.saxutils import escape
 QUERY = """
 query($login: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $login) {
+    name
+    createdAt
     contributionsCollection(from: $from, to: $to) {
       contributionCalendar {
-        totalContributions
         weeks {
           contributionDays {
             date
@@ -31,29 +38,46 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
 }
 """
 
-COLORS = {
+STREAK_COLORS = {
     "dark": {
-        "background": "none",
-        "border": "none",
-        "text": "#c9d1d9",
-        "muted": "#8b949e",
-        "grid": "#21262d",
-        "line": "#1ed760",
-        "area": "#1ed760",
+        "background": "#00000000",
+        "border": "#0000",
+        "stroke": "#39D353",
+        "ring": "#39D353",
+        "fire": "#1ED760",
+        "current_number": "#FFFFFF",
+        "side_numbers": "#FFFFFF",
+        "current_label": "#FFFFFF",
+        "side_labels": "#FFFFFF",
+        "dates": "#39D353",
     },
     "light": {
-        "background": "none",
-        "border": "none",
-        "text": "#24292f",
-        "muted": "#6e7781",
-        "grid": "#e4e2e3",
-        "line": "#1ed760",
-        "area": "#1ed760",
+        "background": "#00000000",
+        "border": "#0000",
+        "stroke": "#39D353",
+        "ring": "#39D353",
+        "fire": "#1ED760",
+        "current_number": "#39D353",
+        "side_numbers": "#39D353",
+        "current_label": "#24292F",
+        "side_labels": "#24292F",
+        "dates": "#1ED760",
     },
 }
 
+ACTIVITY_COLORS = {
+    "background": "#00000000",
+    "border": "#0000",
+    "text": "#8B949E",
+    "line": "#1ED760",
+    "point": "#8B949E",
+    "area": "#26A641",
+}
 
-def fetch_calendar(username: str, token: str, start: date, end: date) -> dict:
+
+def fetch_calendar(
+    username: str, token: str, start: date, end: date
+) -> tuple[str, date, dict]:
     start_time = datetime.combine(start, time.min, tzinfo=timezone.utc)
     end_time = datetime.combine(end, time.max, tzinfo=timezone.utc)
     payload = json.dumps(
@@ -83,19 +107,34 @@ def fetch_calendar(username: str, token: str, start: date, end: date) -> dict:
             result = json.loads(response.read().decode("utf-8"))
     except HTTPError as error:
         detail = error.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"GitHub GraphQL request failed ({error.code}): {detail}") from error
+        raise RuntimeError(
+            f"GitHub GraphQL request failed ({error.code}): {detail}"
+        ) from error
     except URLError as error:
-        raise RuntimeError(f"Could not reach the GitHub GraphQL API: {error.reason}") from error
+        raise RuntimeError(
+            f"Could not reach the GitHub GraphQL API: {error.reason}"
+        ) from error
 
     if result.get("errors"):
-        messages = "; ".join(item.get("message", "GraphQL error") for item in result["errors"])
+        messages = "; ".join(
+            item.get("message", "GraphQL error") for item in result["errors"]
+        )
         raise RuntimeError(f"GitHub GraphQL query failed: {messages}")
 
     user = (result.get("data") or {}).get("user")
     if user is None:
-        raise RuntimeError(f"GitHub user {username!r} was not found or is not accessible")
+        raise RuntimeError(
+            f"GitHub user {username!r} was not found or is not accessible"
+        )
 
-    return user["contributionsCollection"]["contributionCalendar"]
+    created_at = user.get("createdAt")
+    if not created_at:
+        raise RuntimeError(f"GitHub did not return the creation date for {username!r}")
+    account_created = datetime.fromisoformat(
+        created_at.replace("Z", "+00:00")
+    ).date()
+    calendar = user["contributionsCollection"]["contributionCalendar"]
+    return user.get("name") or username, account_created, calendar
 
 
 def calendar_counts(calendar: dict, start: date, end: date) -> dict[date, int]:
@@ -113,104 +152,344 @@ def calendar_counts(calendar: dict, start: date, end: date) -> dict[date, int]:
     return counts
 
 
-def streak_lengths(counts: dict[date, int], today: date) -> tuple[int, int]:
-    ordered_days = sorted(day for day in counts if day <= today)
-    longest = current_run = 0
-    for day in ordered_days:
-        if counts[day] > 0:
-            current_run += 1
-            longest = max(longest, current_run)
+def fetch_all_contributions(
+    username: str, token: str, today: date
+) -> tuple[str, dict[date, int]]:
+    this_year_start = date(today.year, 1, 1)
+    display_name, account_created, calendar = fetch_calendar(
+        username, token, this_year_start, today
+    )
+    first_day = max(account_created, date(2005, 1, 1))
+    counts: dict[date, int] = {}
+
+    for year in range(first_day.year, today.year + 1):
+        year_start = max(first_day, date(year, 1, 1))
+        year_end = min(today, date(year, 12, 31))
+        if year == today.year:
+            year_calendar = calendar
         else:
-            current_run = 0
+            _, _, year_calendar = fetch_calendar(
+                username, token, year_start, year_end
+            )
+        counts.update(calendar_counts(year_calendar, year_start, year_end))
 
-    current_streak = 0
-    streak_end = today if counts.get(today, 0) else today - timedelta(days=1)
-    day = streak_end
+    return display_name, counts
+
+
+def streak_summary(
+    counts: dict[date, int], today: date
+) -> tuple[int, date | None, int, date | None, date | None, date | None]:
+    active_days = [day for day, count in counts.items() if count > 0 and day <= today]
+    first_contribution = min(active_days) if active_days else None
+
+    longest = 0
+    longest_start = None
+    longest_end = None
+    run_length = 0
+    run_start = None
+    for day in sorted(day for day in counts if day <= today):
+        if counts[day] > 0:
+            if run_length == 0:
+                run_start = day
+            run_length += 1
+            if run_length > longest:
+                longest = run_length
+                longest_start = run_start
+                longest_end = day
+        else:
+            run_length = 0
+            run_start = None
+
+    current_end = today if counts.get(today, 0) > 0 else today - timedelta(days=1)
+    current_length = 0
+    current_start = None
+    day = current_end
     while counts.get(day, 0) > 0:
-        current_streak += 1
+        current_start = day
+        current_length += 1
         day -= timedelta(days=1)
-    return current_streak, longest
 
-
-def write_streak_card(output: Path, current_streak: int, longest_streak: int, total: int) -> None:
-    width, height = 400, 160
-    columns = (66, 200, 334)
-    metrics = (
-        ("Total Contributions", str(total)),
-        ("Current Streak", f"{current_streak} {'day' if current_streak == 1 else 'days'}"),
-        ("Longest Streak", f"{longest_streak} {'day' if longest_streak == 1 else 'days'}"),
+    return (
+        current_length,
+        current_start,
+        longest,
+        longest_start,
+        longest_end,
+        first_contribution,
     )
 
-    for theme, colors in COLORS.items():
-        metric_svg = "\n".join(
-            f'<text x="{x}" y="91" text-anchor="middle" class="value">{escape(value)}</text>'
-            f'<text x="{x}" y="119" text-anchor="middle" class="label">{escape(label)}</text>'
-            for x, (label, value) in zip(columns, metrics)
-        )
-        svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="GitHub contribution streak statistics">
-<style>
-  .title {{ font: 600 17px 'Segoe UI', Ubuntu, Sans-Serif; fill: {colors['text']}; }}
-  .value {{ font: 700 22px 'Segoe UI', Ubuntu, Sans-Serif; fill: {colors['line']}; }}
-  .label {{ font: 500 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: {colors['muted']}; }}
-</style>
-<rect x="0.5" y="0.5" width="399" height="159" rx="6" fill="{colors['background']}" stroke="none"/>
-<text x="22" y="32" class="title">GitHub Streak Stats</text>
-<path d="M133 54v82 M267 54v82" stroke="{colors['grid']}"/>
-{metric_svg}
+
+def format_date(value: date | None) -> str:
+    if value is None:
+        return "No contributions yet"
+    return f"{value.strftime('%b')} {value.day}, {value.year}"
+
+
+def date_range(start: date | None, end: date | None, *, present: bool = False) -> str:
+    if start is None:
+        return "No contributions yet" if present else "No streak yet"
+    end_text = "Present" if present else format_date(end)
+    return f"{format_date(start)} - {end_text}"
+
+
+def wrap_text(text: str, max_chars: int) -> list[str]:
+    if max_chars <= 0 or len(text) <= max_chars:
+        return [text]
+    if " - " in text:
+        return text.replace(" - ", "\n- ", 1).split("\n", 1)
+
+    words = text.split()
+    lines: list[str] = []
+    line = ""
+    for word in words:
+        while len(word) > max_chars:
+            if line:
+                lines.append(line)
+                line = ""
+            lines.append(word[:max_chars])
+            word = word[max_chars:]
+        candidate = f"{line} {word}".strip()
+        if line and len(candidate) > max_chars:
+            lines.append(line)
+            line = word
+        else:
+            line = candidate
+    if line:
+        lines.append(line)
+    return lines or [text]
+
+
+def tspans(text: str, max_chars: int, first_line_offset: int) -> str:
+    lines = wrap_text(text, max_chars)
+    if len(lines) == 1:
+        return escape(lines[0])
+    return (
+        f'<tspan x="0" dy="{first_line_offset}">{escape(lines[0])}</tspan>'
+        f'<tspan x="0" dy="16">{escape(lines[1])}</tspan>'
+    )
+
+
+def write_streak_card(
+    output: Path,
+    current_streak: int,
+    current_start: date | None,
+    longest_streak: int,
+    longest_start: date | None,
+    longest_end: date | None,
+    total: int,
+    first_contribution: date | None,
+) -> None:
+    width, height = 400, 195
+    columns = (width / 6, width / 2, width * 5 / 6)
+    metrics = (
+        (
+            "Total Contributions",
+            f"{total:,}",
+            date_range(first_contribution, None, present=True),
+            "side_numbers",
+            "side_labels",
+        ),
+        (
+            "Current Streak",
+            str(current_streak),
+            date_range(
+                current_start,
+                current_start + timedelta(days=current_streak - 1)
+                if current_start is not None
+                else None,
+            ),
+            "current_number",
+            "current_label",
+        ),
+        (
+            "Longest Streak",
+            str(longest_streak),
+            date_range(longest_start, longest_end),
+            "side_numbers",
+            "side_labels",
+        ),
+    )
+
+    for theme, colors in STREAK_COLORS.items():
+        metric_svg = []
+        for x, (label, value, period, number_color, label_color) in zip(
+            columns, metrics
+        ):
+            label_text = tspans(label, int(width / 3 / 7.5), -9)
+            period_text = tspans(period, int(width / 3 / 6), 0)
+            metric_svg.append(
+                f'<g transform="translate({x:.3f},48)">'
+                f'<text x="0" y="32" text-anchor="middle" fill="{colors[number_color]}" '
+                f'font-family="Segoe UI, Ubuntu, sans-serif" font-weight="700" '
+                f'font-size="28px">{escape(value)}</text></g>'
+                f'<g transform="translate({x:.3f},84)">'
+                f'<text x="0" y="32" text-anchor="middle" fill="{colors[label_color]}" '
+                f'font-family="Segoe UI, Ubuntu, sans-serif" '
+                f'font-weight="{700 if label == "Current Streak" else 400}" '
+                f'font-size="14px">{label_text}</text></g>'
+                f'<g transform="translate({x:.3f},114)">'
+                f'<text x="0" y="32" text-anchor="middle" fill="{colors["dates"]}" '
+                f'font-family="Segoe UI, Ubuntu, sans-serif" font-weight="400" '
+                f'font-size="12px">{period_text}</text></g>'
+            )
+
+        svg = f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  style="isolation:isolate" viewBox="0 0 {width} {height}" width="{width}px" height="{height}px"
+  role="img" aria-label="GitHub contribution streak statistics">
+<defs>
+  <clipPath id="outer_rectangle"><rect width="{width}" height="{height}" rx="4.5"/></clipPath>
+  <mask id="ring_cutout">
+    <rect width="{width}" height="{height}" fill="white"/>
+    <ellipse cx="{columns[1]:.3f}" cy="32" rx="13" ry="18" fill="black"/>
+  </mask>
+</defs>
+<g clip-path="url(#outer_rectangle)">
+  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="4.5"
+    fill="{colors["background"]}" stroke="{colors["border"]}"/>
+  <g fill="none" stroke="{colors["stroke"]}" stroke-width="1">
+    <line x1="{width / 3:.3f}" y1="28" x2="{width / 3:.3f}" y2="170"/>
+    <line x1="{width * 2 / 3:.3f}" y1="28" x2="{width * 2 / 3:.3f}" y2="170"/>
+  </g>
+  <circle cx="{columns[1]:.3f}" cy="71" r="40" fill="none"
+    stroke="{colors["ring"]}" stroke-width="5" mask="url(#ring_cutout)"/>
+  <g transform="translate({columns[1]:.3f},19.5)" fill="{colors["fire"]}">
+    <path d="M1.5 0.7c.4 2.2.8 3.9.8 5.2 0 2.1-1.4 3.3-3.5 3.3-2 0-3.6-1.6-3.6-3.7v-.4c-2.1 2.5-3.2 5.5-3.2 8.9 0 5.1 3.5 8.5 8 8.5 4.7 0 8-3.5 8-8.4 0-5.1-2.4-10-6.5-13.4zM-.2 19.2c-1.9 0-3.3-1.4-3.3-3.2 0-1.6 1-2.7 2.8-3.1 1.8-.4 3.3-1.2 4.2-2.4.4 1.2.6 2.5.6 3.7 0 3-1.8 5-4.3 5z"/>
+  </g>
+  {"".join(metric_svg)}
+</g>
 </svg>
 '''
         (output / f"streak-{theme}.svg").write_text(svg, encoding="utf-8")
 
 
-def write_activity_graph(output: Path, counts: dict[date, int], today: date) -> None:
+def nice_y_ticks(maximum: int) -> tuple[list[int], int]:
+    target = max(1, maximum)
+    raw_step = target / 5
+    magnitude = 10 ** floor(log10(raw_step))
+    step = next(
+        candidate * magnitude
+        for candidate in (1, 2, 5, 10)
+        if candidate * magnitude >= raw_step
+    )
+    step = max(1, int(step))
+    scale_max = max(step, int(ceil(target / step) * step))
+    return list(range(0, scale_max + 1, step)), scale_max
+
+
+def curve_commands(points: list[tuple[float, float]]) -> str:
+    commands = []
+    for index in range(len(points) - 1):
+        x1, y1 = points[index]
+        x2, y2 = points[index + 1]
+        x0, y0 = points[max(0, index - 1)]
+        x3, y3 = points[min(len(points) - 1, index + 2)]
+        control1 = (x1 + (x2 - x0) / 6, y1 + (y2 - y0) / 6)
+        control2 = (x2 - (x3 - x1) / 6, y2 - (y3 - y1) / 6)
+        low_y, high_y = sorted((y1, y2))
+        control1 = (control1[0], min(high_y, max(low_y, control1[1])))
+        control2 = (control2[0], min(high_y, max(low_y, control2[1])))
+        commands.append(
+            f"C {control1[0]:.2f} {control1[1]:.2f}, "
+            f"{control2[0]:.2f} {control2[1]:.2f}, {x2:.2f} {y2:.2f}"
+        )
+    return " ".join(commands)
+
+
+def write_activity_graph(
+    output: Path,
+    counts: dict[date, int],
+    today: date,
+    display_name: str,
+) -> None:
     days = [today - timedelta(days=offset) for offset in range(30, -1, -1)]
     values = [counts.get(day, 0) for day in days]
-    width, height = 1000, 260
-    left, right, top, bottom = 50, 22, 58, 38
+
+    width, height = 1200, 420
+    left, right, top = 90, 50, 80
+    bottom = height - 20 - 50
     plot_width = width - left - right
-    plot_height = height - top - bottom
-    maximum = max(values, default=0)
-    scale_max = max(1, maximum)
+    plot_height = bottom - top
+    y_ticks, y_max = nice_y_ticks(max(values, default=0))
     points = [
-        (left + index * plot_width / (len(days) - 1), top + plot_height * (1 - value / scale_max))
+        (
+            left + index * plot_width / (len(days) - 1),
+            bottom - value * plot_height / y_max,
+        )
         for index, value in enumerate(values)
     ]
-    line_points = " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
-    area_points = (
-        f"{left},{top + plot_height} "
-        + line_points
-        + f" {left + plot_width},{top + plot_height}"
+    line_path = f"M {points[0][0]:.2f} {points[0][1]:.2f} {curve_commands(points)}"
+    area_path = (
+        f"M {points[0][0]:.2f} {bottom} L {points[0][0]:.2f} {points[0][1]:.2f} "
+        f"{curve_commands(points)} L {points[-1][0]:.2f} {bottom} Z"
     )
-    ticks = sorted({0, round(scale_max / 2), scale_max})
+    grid_svg = []
+    y_label_svg = []
+    for value in y_ticks:
+        y = bottom - value * plot_height / y_max
+        grid_svg.append(
+            f'<line x1="{left}" y1="{y:.2f}" x2="{width - right}" y2="{y:.2f}" '
+            f'class="ct-grid ct-horizontal"/>'
+        )
+        y_label_svg.append(
+            f'<text x="{left - 10}" y="{y + 4:.2f}" text-anchor="end" '
+            f'class="ct-label">{value}</text>'
+        )
 
-    for theme, colors in COLORS.items():
-        grid_svg = "\n".join(
-            f'<line x1="{left}" y1="{top + plot_height * (1 - value / scale_max):.1f}" '
-            f'x2="{left + plot_width}" y2="{top + plot_height * (1 - value / scale_max):.1f}" class="grid"/>'
-            f'<text x="{left - 10}" y="{top + plot_height * (1 - value / scale_max) + 4:.1f}" text-anchor="end" class="label">{value}</text>'
-            for value in ticks
+    x_grid_svg = []
+    x_label_svg = []
+    for index, day in enumerate(days):
+        x = points[index][0]
+        x_grid_svg.append(
+            f'<line x1="{x:.2f}" y1="{top}" x2="{x:.2f}" y2="{bottom:.2f}" '
+            f'class="ct-grid ct-vertical"/>'
         )
-        label_indices = [i for i, day in enumerate(days) if i == 0 or day.weekday() == 0 or i == len(days) - 1]
-        date_labels = "\n".join(
-            f'<text x="{points[index][0]:.1f}" y="{height - 12}" text-anchor="middle" class="label">{days[index].strftime("%b")} {days[index].day}</text>'
-            for index in label_indices
+        x_label_svg.append(
+            f'<text x="{x - 4.5:.2f}" y="{bottom + 22:.2f}" text-anchor="middle" '
+            f'class="ct-label">{day.day}</text>'
         )
-        svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="GitHub activity over the last 31 days">
+
+    point_svg = "\n".join(
+        f'<circle cx="{x:.2f}" cy="{y:.2f}" r="5" class="ct-point"/>'
+        for x, y in points
+    )
+    title = escape(f"{display_name}'s Contribution Graph")
+    colors = ACTIVITY_COLORS
+
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}"
+  viewBox="0 0 {width} {height}" fill="none" role="img"
+  aria-label="{title}">
+<defs>
+  <clipPath id="plot_clip"><rect x="{left}" y="{top}" width="{plot_width}" height="{plot_height}"/></clipPath>
+</defs>
+<rect x="0" y="0" width="100%" height="100%" rx="0" fill="{colors["background"]}"
+  stroke="{colors["border"]}" stroke-width="1"/>
 <style>
-  .title {{ font: 600 17px 'Segoe UI', Ubuntu, Sans-Serif; fill: {colors['text']}; }}
-  .summary {{ font: 500 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: {colors['muted']}; }}
-  .label {{ font: 500 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: {colors['muted']}; }}
-  .grid {{ stroke: {colors['grid']}; stroke-width: 1; }}
+  svg {{ font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; }}
+  .header {{ fill: {colors["text"]}; font: 600 20px 'Segoe UI', Ubuntu, Sans-Serif; }}
+  .ct-label {{ fill: {colors["text"]}; font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; }}
+  .ct-grid {{ stroke: {colors["text"]}; stroke-width: 1px; stroke-opacity: .3; stroke-dasharray: 2px; }}
+  .ct-line {{ fill: none; stroke: {colors["line"]}; stroke-width: 4px; stroke-linecap: round; stroke-linejoin: round; }}
+  .ct-area {{ fill: {colors["area"]}; fill-opacity: .1; stroke: none; }}
+  .ct-point {{ fill: {colors["point"]}; }}
+  .axis-title {{ fill: {colors["text"]}; font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; }}
 </style>
-<rect x="0.5" y="0.5" width="999" height="259" rx="6" fill="{colors['background']}" stroke="none"/>
-<text x="24" y="31" class="title">KinhoLeung's Activity Graph</text>
-<text x="976" y="31" text-anchor="end" class="summary">{sum(values)} contributions · last 31 days</text>
-{grid_svg}
-<polygon points="{area_points}" fill="{colors['area']}" fill-opacity="0.12"/>
-<polyline points="{line_points}" fill="none" stroke="{colors['line']}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-{date_labels}
+<text x="{width / 2}" y="40" text-anchor="middle" class="header">{title}</text>
+<g clip-path="url(#plot_clip)">
+  {"".join(grid_svg)}
+  {"".join(x_grid_svg)}
+  <path d="{area_path}" class="ct-area"/>
+  <path d="{line_path}" class="ct-line"/>
+  {point_svg}
+</g>
+{"".join(y_label_svg)}
+{"".join(x_label_svg)}
+<text x="24" y="{(top + bottom) / 2}" text-anchor="middle" class="axis-title"
+  transform="rotate(-90 24 {(top + bottom) / 2})">Contributions</text>
+<text x="{left + plot_width / 2}" y="{height - 12}" text-anchor="middle"
+  class="axis-title">Days</text>
 </svg>
 '''
+    for theme in ("dark", "light"):
         (output / f"activity-graph-{theme}.svg").write_text(svg, encoding="utf-8")
 
 
@@ -222,15 +501,29 @@ def main() -> int:
         return 1
 
     today = datetime.now(timezone.utc).date()
-    start = today - timedelta(days=364)
     try:
-        calendar = fetch_calendar(username, token, start, today)
-        counts = calendar_counts(calendar, start, today)
-        current_streak, longest_streak = streak_lengths(counts, today)
+        display_name, counts = fetch_all_contributions(username, token, today)
+        (
+            current_streak,
+            current_start,
+            longest_streak,
+            longest_start,
+            longest_end,
+            first_contribution,
+        ) = streak_summary(counts, today)
         output = Path(__file__).resolve().parents[2] / "profile"
         output.mkdir(parents=True, exist_ok=True)
-        write_streak_card(output, current_streak, longest_streak, sum(counts.values()))
-        write_activity_graph(output, counts, today)
+        write_streak_card(
+            output,
+            current_streak,
+            current_start,
+            longest_streak,
+            longest_start,
+            longest_end,
+            sum(counts.values()),
+            first_contribution,
+        )
+        write_activity_graph(output, counts, today, display_name)
     except (KeyError, RuntimeError, ValueError) as error:
         print(error, file=sys.stderr)
         return 1
