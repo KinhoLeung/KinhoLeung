@@ -1,15 +1,15 @@
 
       <svg
-        width="400"
+        width="437"
         height="195"
-        viewBox="0 0 400 195"
+        viewBox="0 0 437 195"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         role="img"
         aria-labelledby="descId"
       >
-        <title id="titleId">kinho&#39;s GitHub Stats, Rank: C</title>
-        <desc id="descId">Total Stars Earned: 4, Total Commits  (last year) : 134, Total PRs: 5, Total Issues: 5, Contributed to (last year): 3</desc>
+        <title id="titleId">kinho's GitHub Stats, Rank: C</title>
+        <desc id="descId">Total Stars Earned: 4, Total Commits  (last year) : 135, Total PRs: 5, Total Issues: 5, Contributed to (last year): 3</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,12 +73,11 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 223.30032326574027;
+        stroke-dashoffset: 223.22033614515783;
       }
     }
   
   
-          
 
           
       /* Animations */
@@ -103,21 +102,15 @@
         </style>
 
         
-        <defs>
-          
-          
-        </defs>
-        
 
         <rect
           data-testid="card-bg"
-          class="card-bg"
           x="0.5"
           y="0.5"
           rx="4.5"
           height="99%"
           stroke="#e4e2e2"
-          width="399"
+          width="436"
           fill="#00000000"
           stroke-opacity="0"
         />
@@ -133,7 +126,7 @@
         y="0"
         class="header"
         data-testid="header"
-      >kinho&#39;s GitHub Stats</text>
+      >kinho's GitHub Stats</text>
     </g>
       </g>
     
@@ -144,7 +137,7 @@
         >
           
     <g data-testid="rank-circle"
-          transform="translate(348.5, 47.5)">
+          transform="translate(367, 47.5)">
         <circle class="rank-circle-rim" cx="-10" cy="8" r="40" />
         <circle class="rank-circle" cx="-10" cy="8" r="40" />
         <g class="rank-text">
@@ -166,7 +159,7 @@
       <text class="stat  bold" x="25" y="12.5">Total Stars Earned:</text>
       <text
         class="stat  bold"
-        x="224.01"
+        x="219.01"
         y="12.5"
         data-testid="stars"
       >4</text>
@@ -181,10 +174,10 @@
       <text class="stat  bold" x="25" y="12.5">Total Commits (last year):</text>
       <text
         class="stat  bold"
-        x="224.01"
+        x="219.01"
         y="12.5"
         data-testid="commits"
-      >134</text>
+      >135</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -196,7 +189,7 @@
       <text class="stat  bold" x="25" y="12.5">Total PRs:</text>
       <text
         class="stat  bold"
-        x="224.01"
+        x="219.01"
         y="12.5"
         data-testid="prs"
       >5</text>
@@ -211,7 +204,7 @@
       <text class="stat  bold" x="25" y="12.5">Total Issues:</text>
       <text
         class="stat  bold"
-        x="224.01"
+        x="219.01"
         y="12.5"
         data-testid="issues"
       >5</text>
@@ -226,7 +219,7 @@
       <text class="stat  bold" x="25" y="12.5">Contributed to (last year):</text>
       <text
         class="stat  bold"
-        x="224.01"
+        x="219.01"
         y="12.5"
         data-testid="contribs"
       >3</text>
