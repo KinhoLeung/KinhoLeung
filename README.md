@@ -62,16 +62,20 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
   
   <a href="https://github.com/DenverCoder1/github-readme-streak-stats">
     <picture>
-      <source srcset="https://github-readme-streak-stats-vijaypur.vercel.app?user=KinhoLeung&hide_border=true&border=E4E2E3&card_width=400&theme=github-dark&background=00000000&fire=1ED760" media="(prefers-color-scheme: dark)" />
-      <source srcset="https://github-readme-streak-stats-vijaypur.vercel.app?user=KinhoLeung&hide_border=true&border=E4E2E3&card_width=400&theme=github-light&background=00000000&dates=1ED760" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
-      <img alt="streak stats" src="https://github-readme-streak-stats-vijaypur.vercel.app?user=KinhoLeung&hide_border=true&border=E4E2E3&card_width=400&theme=github-light&background=00000000&dates=1ED760" />
+      <source srcset="https://raw.githubusercontent.com/KinhoLeung/KinhoLeung/main/profile/streak-dark.svg" media="(prefers-color-scheme: dark)" />
+      <source srcset="https://raw.githubusercontent.com/KinhoLeung/KinhoLeung/main/profile/streak-light.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+      <img alt="GitHub streak stats" src="https://raw.githubusercontent.com/KinhoLeung/KinhoLeung/main/profile/streak-light.svg" />
     </picture>
   </a>
 </div>
 
 <div align="center">
   <a href="https://github.com/ashutosh00710/github-readme-activity-graph">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=KinhoLeung&hide_border=true&line=1ED760&theme=github-compact&area=true" />
+    <picture>
+      <source srcset="https://raw.githubusercontent.com/KinhoLeung/KinhoLeung/main/profile/activity-graph-dark.svg" media="(prefers-color-scheme: dark)" />
+      <source srcset="https://raw.githubusercontent.com/KinhoLeung/KinhoLeung/main/profile/activity-graph-light.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+      <img alt="GitHub activity graph" src="https://raw.githubusercontent.com/KinhoLeung/KinhoLeung/main/profile/activity-graph-light.svg" />
+    </picture>
   </a>
 </div>
 
