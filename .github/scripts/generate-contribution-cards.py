@@ -34,20 +34,20 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
 COLORS = {
     "dark": {
         "background": "none",
-        "border": "#30363d",
-        "text": "#e6edf3",
+        "border": "none",
+        "text": "#c9d1d9",
         "muted": "#8b949e",
-        "grid": "#30363d",
+        "grid": "#21262d",
         "line": "#1ed760",
         "area": "#1ed760",
     },
     "light": {
         "background": "none",
-        "border": "#d0d7de",
+        "border": "none",
         "text": "#24292f",
-        "muted": "#57606a",
-        "grid": "#d8dee4",
-        "line": "#168f45",
+        "muted": "#6e7781",
+        "grid": "#e4e2e3",
+        "line": "#1ed760",
         "area": "#1ed760",
     },
 }
@@ -133,12 +133,12 @@ def streak_lengths(counts: dict[date, int], today: date) -> tuple[int, int]:
 
 
 def write_streak_card(output: Path, current_streak: int, longest_streak: int, total: int) -> None:
-    width, height = 420, 160
-    columns = (80, 210, 340)
+    width, height = 400, 160
+    columns = (66, 200, 334)
     metrics = (
         ("Total Contributions", str(total)),
-        ("Current Streak", f"{current_streak} days"),
-        ("Longest Streak", f"{longest_streak} days"),
+        ("Current Streak", f"{current_streak} {'day' if current_streak == 1 else 'days'}"),
+        ("Longest Streak", f"{longest_streak} {'day' if longest_streak == 1 else 'days'}"),
     )
 
     for theme, colors in COLORS.items():
@@ -153,9 +153,9 @@ def write_streak_card(output: Path, current_streak: int, longest_streak: int, to
   .value {{ font: 700 22px 'Segoe UI', Ubuntu, Sans-Serif; fill: {colors['line']}; }}
   .label {{ font: 500 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: {colors['muted']}; }}
 </style>
-<rect x="0.5" y="0.5" width="419" height="159" rx="6" fill="{colors['background']}" stroke="{colors['border']}"/>
+<rect x="0.5" y="0.5" width="399" height="159" rx="6" fill="{colors['background']}" stroke="none"/>
 <text x="22" y="32" class="title">GitHub Streak Stats</text>
-<path d="M140 54v82 M280 54v82" stroke="{colors['border']}"/>
+<path d="M133 54v82 M267 54v82" stroke="{colors['grid']}"/>
 {metric_svg}
 </svg>
 '''
@@ -202,8 +202,8 @@ def write_activity_graph(output: Path, counts: dict[date, int], today: date) -> 
   .label {{ font: 500 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: {colors['muted']}; }}
   .grid {{ stroke: {colors['grid']}; stroke-width: 1; }}
 </style>
-<rect x="0.5" y="0.5" width="999" height="259" rx="6" fill="{colors['background']}" stroke="{colors['border']}"/>
-<text x="24" y="31" class="title">GitHub Activity</text>
+<rect x="0.5" y="0.5" width="999" height="259" rx="6" fill="{colors['background']}" stroke="none"/>
+<text x="24" y="31" class="title">KinhoLeung's Activity Graph</text>
 <text x="976" y="31" text-anchor="end" class="summary">{sum(values)} contributions · last 31 days</text>
 {grid_svg}
 <polygon points="{area_points}" fill="{colors['area']}" fill-opacity="0.12"/>
