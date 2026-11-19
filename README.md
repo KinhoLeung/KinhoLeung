@@ -85,11 +85,10 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 2. ⭐ Starred [chen08209/FlClash](https://github.com/chen08209/FlClash)<br>
 3. ⭐ Starred [KinhoLeung/dsssp_flutter](https://github.com/KinhoLeung/dsssp_flutter)<br>
 4. ⭐ Starred [keshikan/DSEG](https://github.com/keshikan/DSEG)<br>
-5. ⭐ Starred [microsoft/WindowsDeveloperConfig](https://github.com/microsoft/WindowsDeveloperConfig)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Wednesday, November 18th, 2026, 7:19:32 PM
+Last Updated: Thursday, November 19th, 2026, 1:24:13 AM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
