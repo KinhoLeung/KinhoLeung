@@ -83,11 +83,10 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 <!--RECENT_ACTIVITY:start-->
 1. 🔱 Forked [KinhoLeung/aramhex](https://github.com/KinhoLeung/aramhex) from [czgreat/aramhex](https://github.com/czgreat/aramhex)<br>
 2. ⭐ Starred [chen08209/FlClash](https://github.com/chen08209/FlClash)<br>
-3. ⭐ Starred [KinhoLeung/dsssp_flutter](https://github.com/KinhoLeung/dsssp_flutter)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Thursday, November 26th, 2026, 8:48:21 AM
+Last Updated: Thursday, November 26th, 2026, 6:55:33 PM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
