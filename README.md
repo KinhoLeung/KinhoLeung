@@ -82,11 +82,11 @@ https://skillicons.dev/icons?i=bash,c,cpp,cmake,git,github,githubactions,gmail,l
 # ⚡ Recent GitHub Activity
 <!--RECENT_ACTIVITY:start-->
 1. 🔱 Forked [KinhoLeung/aramhex](https://github.com/KinhoLeung/aramhex) from [czgreat/aramhex](https://github.com/czgreat/aramhex)<br>
-2. ⭐ Starred [chen08209/FlClash](https://github.com/chen08209/FlClash)<br>
+2. ⭐ Starred [Vialibrex/FlClash](https://github.com/Vialibrex/FlClash)<br>
 <!--RECENT_ACTIVITY:end-->
 
 <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Friday, November 27th, 2026, 2:05:27 AM
+Last Updated: Friday, November 27th, 2026, 11:17:27 AM
 <!--RECENT_ACTIVITY:last_update_end-->
 
 <!--
